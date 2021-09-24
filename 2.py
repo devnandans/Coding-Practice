@@ -1,4 +1,4 @@
-#Q 2. Print the pattern.
+#Q 2. Print the pattern
 #12345
 #22345
 #33345
