@@ -4,18 +4,19 @@
 #Sum of product of x and y with floor(n/x) = y 
 
 class Solution:
-	def sumofproduct(self, n):
-		ans = 0
-	    x = 1
+    def sumofproduct(self, n):
+        ans = 0
+        x = 1
 	    
-	    while x<=n:
-	        y=n//x
+        
+        while x<=n:
+            y=n//x
 	       
-	        p = x * y
+            p = x * y
 	    
-	        ans = ans + p
+            ans = ans + p
 	        
-	        x = x + 1
+            x = x + 1
 	
         return ans
         
