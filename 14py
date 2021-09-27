@@ -1,0 +1,60 @@
+#User function Template for python3
+# Q . https://practice.geeksforgeeks.org/problems/reach-a-given-score-1587115621/1/?difficulty[]=0&page=1&query=difficulty[]0page1
+# Reach a given score
+# Consider a game where a player can score 3 or 5 or 10 points in a move. Given a total score n, find number of distinct combinations to reach the given score.
+
+def count(n):
+    #your code here
+    def solve(ways,n,target):
+        if(target==0):
+            return (1);
+        if(n==0):
+            return (0);
+        if(ways[n-1]<=target):
+            return solve(ways,n,target-ways[n-1])+solve(ways,n-1,target);
+        else:
+            return solve(ways,n-1,target);
+            
+    ways=[3,5,10]
+    return solve(ways,3,n)
+    #your code here
+    
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == "__main__":
+    for _ in range(int(input())):
+        n = int(input())
+        print(count(n))
+        
+# } Driver Code Ends
+
+def count(n):
+    #your code here
+    def solve(ways,n,target):
+        if(target==0):
+            return (1);
+        if(n==0):
+            return (0);
+        if(ways[n-1]<=target):
+            return solve(ways,n,target-ways[n-1])+solve(ways,n-1,target);
+        else:
+            return solve(ways,n-1,target);
+            
+    ways=[3,5,10]
+    return solve(ways,3,n)
+    #your code here
+    
+
+#{ 
+#  Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == "__main__":
+    for _ in range(int(input())):
+        n = int(input())
+        print(count(n))
+        
+# } Driver Code Ends
